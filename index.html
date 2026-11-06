@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="hi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#7b321b">
+<title>आध्यात्मिक परिवार | सदस्य पोर्टल</title>
+<style>
+*{box-sizing:border-box} :root{--maroon:#7b321b;--saffron:#d28a32;--cream:#fff8ed;--ink:#34251e;--muted:#796b60}
+body{margin:0;background:#fffdf9;color:var(--ink);font-family:system-ui,'Noto Sans Devanagari',sans-serif}
+.top{display:flex;align-items:center;gap:12px;padding:14px max(5vw,18px);background:#fff;border-bottom:1px solid #eee1d1;position:sticky;top:0;z-index:5}
+.brandmark{width:45px;height:45px;border-radius:50%;display:grid;place-items:center;background:var(--maroon);color:#ffe2a7;font-size:25px}
+h1{font-size:18px;margin:0;color:var(--maroon)}.top p{margin:2px 0 0;color:var(--muted);font-size:12px}.admin-btn{margin-left:auto;border:1px solid #ddc5a6;background:white;color:var(--maroon);padding:8px 13px;border-radius:9px;cursor:pointer}
+.hero{padding:58px max(7vw,22px);background:linear-gradient(115deg,#4f2118,#873d20 58%,#b96c2c);color:white;display:flex;align-items:center;justify-content:space-between;gap:25px;min-height:300px}
+.hero-copy{max-width:650px}.eyebrow{color:#d18b3c;text-transform:uppercase;font-size:11px;font-weight:800;letter-spacing:1.5px}.hero h2{font-size:clamp(30px,5vw,48px);line-height:1.15;margin:12px 0}.hero p{color:#f6e7d6;line-height:1.7;max-width:570px}.hero .eyebrow{color:#ffd58f}
+.mandala{width:170px;height:170px;flex:0 0 170px;border:2px solid #e7b86e;border-radius:50%;outline:1px solid #e7b86e;outline-offset:8px;display:grid;place-content:center;text-align:center;color:#ffe0a5;font-size:55px;background:radial-gradient(circle,#9e542a,#5a281d);box-shadow:0 0 0 18px #ffffff0d}.mandala small{font-size:15px}
+.primary{display:inline-block;background:#e6aa50;color:#3d2115;text-decoration:none;border:0;border-radius:10px;padding:13px 19px;font-weight:800;cursor:pointer}.section{padding:48px max(5vw,18px);max-width:1200px;margin:auto}.section h2{margin:7px 0 18px;font-size:27px}.features{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.features article{padding:22px;border:1px solid #f0dfca;border-radius:16px;background:#fffaf3}.features b{font-size:27px}.features h3{margin:12px 0 5px}.features p,.muted{color:var(--muted);font-size:14px;line-height:1.6}
+.register{display:grid;grid-template-columns:1fr 1.1fr;gap:35px;background:var(--cream);max-width:none;padding-left:max(5vw,18px);padding-right:max(5vw,18px)}.register>div,.register form{max-width:560px}.register strong{font-size:24px;color:var(--maroon)}.notice{padding:12px;background:#f6ead8;border-radius:9px;color:#684322;font-size:13px}
+form label{display:block;font-size:13px;font-weight:650;margin-bottom:13px}input,select,textarea{display:block;width:100%;margin-top:6px;padding:12px;border:1px solid #dfd1c1;border-radius:9px;background:white;color:var(--ink);font:inherit}textarea{resize:vertical}.check{display:flex!important;gap:8px;align-items:flex-start;font-weight:400!important}.check input{width:auto;margin:2px 0}.full{width:100%}.tiny{font-size:11px;color:var(--muted);line-height:1.5}
+.filters{display:flex;gap:10px;margin:15px 0}.filters input{flex:1}.filters select{max-width:230px}.member-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.member{padding:17px;border:1px solid #eadbc8;border-radius:13px;background:#fff}.member h3{margin:0 0 5px}.tag{display:inline-block;background:#f8ead5;color:#75401e;border-radius:20px;padding:4px 9px;font-size:11px}
+footer{text-align:center;background:#3d2119;color:#f8e6d2;padding:28px 15px}footer p{margin:6px}footer small{color:#d2b9a4}
+dialog{border:0;border-radius:16px;padding:22px;width:min(92vw,480px);box-shadow:0 20px 80px #0005}dialog::backdrop{background:#24130fb0}.dialog-head{display:flex;justify-content:space-between;align-items:center}.dialog-head h2{margin:0}.close{border:0;background:none;font-size:20px;cursor:pointer}
+.empty{padding:22px;text-align:center;color:var(--muted);border:1px dashed #ddc5a6;border-radius:12px;grid-column:1/-1}
+@media(max-width:700px){.hero{padding-top:40px;padding-bottom:40px}.mandala{width:95px;height:95px;flex-basis:95px;font-size:32px}.mandala small{font-size:10px}.features{grid-template-columns:1fr}.register{grid-template-columns:1fr;gap:20px}.member-grid{grid-template-columns:1fr}.filters{flex-direction:column}.filters select{max-width:none}.section{padding-top:35px;padding-bottom:35px}}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="brandmark" aria-hidden="true">ॐ</div>
+  <div><h1>आध्यात्मिक परिवार</h1><p>सदस्यता एवं समुदाय पोर्टल</p></div>
+  <button class="admin-btn" id="adminOpen" type="button">Admin</button>
+</header>
+
+<main>
+<section class="hero">
+  <div class="hero-copy">
+    <div class="eyebrow">श्रद्धा • सेवा • सकारात्मकता</div>
+    <h2>आस्था और अच्छे विचारों से जुड़ें</h2>
+    <p>हमारे समुदाय से जुड़ें, अपनी रुचि साझा करें और एक सकारात्मक आध्यात्मिक परिवार का हिस्सा बनें।</p>
+    <a class="primary" href="#register">सदस्य बनें</a>
+  </div>
+  <div class="mandala" aria-label="ॐ"><span>ॐ</span><small>शुभम्</small></div>
+</section>
+
+<section class="section">
+  <div class="eyebrow">हमारा उद्देश्य</div>
+  <h2>समुदाय की विशेषताएँ</h2>
+  <div class="features">
+    <article><b>🙏</b><h3>आध्यात्मिक जुड़ाव</h3><p>सकारात्मक सोच, श्रद्धा और आपसी सम्मान को बढ़ावा देना।</p></article>
+    <article><b>🤝</b><h3>समुदाय</h3><p>एक-दूसरे से परिचित होने और अच्छे विचार साझा करने का मंच।</p></article>
+    <article><b>🌼</b><h3>सरल सदस्यता</h3><p>अपनी बुनियादी जानकारी देकर सदस्यता अनुरोध भेजें।</p></article>
+  </div>
+</section>
+
+<section class="section register" id="register">
+  <div>
+    <div class="eyebrow">जुड़ने की प्रक्रिया</div>
+    <h2>सदस्यता के लिए आवेदन करें</h2>
+    <p class="muted">फॉर्म भरें। आपकी जानकारी इस डेमो वेबसाइट के इसी ब्राउज़र में सेव होगी।</p>
+    <div class="notice">ध्यान दें: यह अभी फ्रंट-एंड डेमो है। आवेदन किसी सर्वर पर नहीं भेजा जाता और दूसरे फोन पर अपने-आप नहीं दिखेगा।</div>
+  </div>
+  <form id="joinForm">
+    <label>पूरा नाम *
+      <input name="name" required maxlength="70" placeholder="अपना नाम लिखें">
+    </label>
+    <label>मोबाइल नंबर *
+      <input name="phone" required inputmode="numeric" pattern="[6-9][0-9]{9}" maxlength="10" placeholder="10 अंकों का मोबाइल नंबर">
+    </label>
+    <label>शहर *
+      <input name="city" required maxlength="60" placeholder="आपका शहर">
+    </label>
+    <label>आपकी रुचि
+      <select name="interest">
+        <option value="आध्यात्मिक चर्चा">आध्यात्मिक चर्चा</option>
+        <option value="सेवा गतिविधियाँ">सेवा गतिविधियाँ</option>
+        <option value="समुदाय से जुड़ना">समुदाय से जुड़ना</option>
+        <option value="अन्य">अन्य</option>
+      </select>
+    </label>
+    <label>संदेश (वैकल्पिक)
+      <textarea name="message" rows="3" maxlength="300" placeholder="कुछ बताना चाहें तो लिखें"></textarea>
+    </label>
+    <label class="check"><input type="checkbox" required> <span>मैं सहमत हूँ कि मेरी दी गई जानकारी सदस्यता अनुरोध के लिए उपयोग की जाए। *</span></label>
+    <button class="primary full" type="submit">आवेदन जमा करें</button>
+    <p class="tiny">अपना OTP, UPI PIN, बैंक विवरण या कोई गोपनीय जानकारी यहाँ न लिखें।</p>
+    <p id="formStatus" role="status" aria-live="polite"></p>
+  </form>
+</section>
+
+<section class="section" id="members">
+  <div class="eyebrow">हमारे लोग</div>
+  <h2>सदस्य सूची</h2>
+  <p class="muted">यह सूची केवल इसी डिवाइस/ब्राउज़र में सेव किए गए डेमो रिकॉर्ड दिखाती है।</p>
+  <div class="filters">
+    <input id="searchMembers" type="search" placeholder="नाम या शहर से खोजें">
+    <select id="cityFilter"><option value="">सभी शहर</option></select>
+  </div>
+  <div class="member-grid" id="memberGrid"><div class="empty">अभी कोई सदस्य सूचीबद्ध नहीं है।</div></div>
+</section>
+</main>
+
+<footer>
+  <p><strong>आध्यात्मिक परिवार</strong></p>
+  <p>श्रद्धा • सेवा • सद्भाव</p>
+  <small>© <span id="year"></span> सभी अधिकार सुरक्षित।</small>
+</footer>
+
+<dialog id="adminDialog">
+  <div class="dialog-head"><h2>Admin पैनल</h2><button class="close" id="adminClose" aria-label="बंद करें">✕</button></div>
+  <p class="muted">डेमो पासकोड: <strong>1234</strong>. यह सुरक्षित लॉगिन नहीं है; लाइव वेबसाइट पर इसका उपयोग न करें।</p>
+  <form id="adminLogin">
+    <label>पासकोड<input id="adminPin" type="password" inputmode="numeric" required placeholder="पासकोड"></label>
+    <button class="primary full" type="submit">लॉगिन</button>
+  </form>
+  <div id="adminArea" hidden>
+    <p id="adminCount" class="muted"></p>
+    <button class="primary" id="exportCsv" type="button">CSV डाउनलोड करें</button>
+    <button class="admin-btn" id="clearMembers" type="button">सभी रिकॉर्ड हटाएँ</button>
+    <p class="tiny">रिकॉर्ड केवल इस ब्राउज़र के local storage में हैं।</p>
+  </div>
+  <p id="adminStatus" role="status" aria-live="polite"></p>
+</dialog>
+
+<script>
+(() => {
+  const KEY = "spiritual_family_members_v1";
+  const $ = (id) => document.getElementById(id);
+  const readMembers = () => {
+    try { return JSON.parse(localStorage.getItem(KEY) || "[]"); }
+    catch { return []; }
+  };
+  const saveMembers = (members) => localStorage.setItem(KEY, JSON.stringify(members));
+  const escapeHtml = (value) => String(value ?? "").replace(/[&<>"']/g, ch => ({
+    "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"
+  })[ch]);
+
+  function renderMembers() {
+    const members = readMembers();
+    const query = $("searchMembers").value.trim().toLowerCase();
+    const city = $("cityFilter").value;
+    const cities = [...new Set(members.map(m => m.city).filter(Boolean))].sort();
+    const oldCity = $("cityFilter").value;
+    $("cityFilter").innerHTML = '<option value="">सभी शहर</option>' +
+      cities.map(c => `<option value="${escapeHtml(c)}">${escapeHtml(c)}</option>`).join("");
+    $("cityFilter").value = cities.includes(oldCity) ? oldCity : "";
+    const filtered = members.filter(m =>
+      (!query || `${m.name} ${m.city}`.toLowerCase().includes(query)) &&
+      (!$("cityFilter").value || m.city === $("cityFilter").value)
+    );
+    $("memberGrid").innerHTML = filtered.length ? filtered.map(m => `
+      <article class="member">
+        <h3>${escapeHtml(m.name)}</h3>
+        <span class="tag">${escapeHtml(m.interest)}</span>
+        <p class="muted">📍 ${escapeHtml(m.city)}</p>
+        <p class="tiny">सदस्यता अनुरोध: ${new Date(m.createdAt).toLocaleDateString("hi-IN")}</p>
+      </article>`).join("") : '<div class="empty">कोई सदस्य नहीं मिला।</div>';
+  }
+
+  $("joinForm").addEventListener("submit", (event) => {
+    event.preventDefault();
+    const form = event.currentTarget;
+    if (!form.reportValidity()) return;
+    const data = Object.fromEntries(new FormData(form).entries());
+    const members = readMembers();
+    if (members.some(m => m.phone === data.phone)) {
+      $("formStatus").textContent = "यह मोबाइल नंबर पहले से दर्ज है।";
+      return;
+    }
+    members.unshift({...data, createdAt:new Date().toISOString()});
+    saveMembers(members);
+    form.reset();
+    $("formStatus").textContent = "आपका आवेदन इस डिवाइस में सेव हो गया है। धन्यवाद!";
+    renderMembers();
+  });
+
+  $("searchMembers").addEventListener("input", renderMembers);
+  $("cityFilter").addEventListener("change", renderMembers);
+  $("year").textContent = new Date().getFullYear();
+
+  $("adminOpen").addEventListener("click", () => $("adminDialog").showModal());
+  $("adminClose").addEventListener("click", () => $("adminDialog").close());
+  $("adminLogin").addEventListener("submit", (event) => {
+    event.preventDefault();
+    if ($("adminPin").value !== "1234") {
+      $("adminStatus").textContent = "गलत पासकोड।";
+      return;
+    }
+    $("adminArea").hidden = false;
+    $("adminStatus").textContent = "डेमो एडमिन पैनल खुल गया।";
+    $("adminCount").textContent = `कुल आवेदन: ${readMembers().length}`;
+  });
+  $("exportCsv").addEventListener("click", () => {
+    const rows = readMembers();
+    const fields = ["name","phone","city","interest","message","createdAt"];
+    const csvCell = v => `"${String(v ?? "").replace(/"/g,'""')}"`;
+    const csv = [fields.join(","), ...rows.map(r => fields.map(f => csvCell(r[f])).join(","))].join("\r\n");
+    const blob = new Blob(["\ufeff" + csv], {type:"text/csv;charset=utf-8"});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url; a.download = "membership-applications.csv"; a.click();
+    URL.revokeObjectURL(url);
+  });
+  $("clearMembers").addEventListener("click", () => {
+    if (!confirm("क्या आप इसी ब्राउज़र के सभी सदस्य रिकॉर्ड हटाना चाहते हैं?")) return;
+    saveMembers([]);
+    $("adminCount").textContent = "कुल आवेदन: 0";
+    $("adminStatus").textContent = "रिकॉर्ड हटा दिए गए।";
+    renderMembers();
+  });
+  renderMembers();
+})();
+</script>
+</body>
+</html>
